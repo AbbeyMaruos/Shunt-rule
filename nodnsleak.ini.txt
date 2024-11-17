@@ -14,7 +14,7 @@ ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ch
 ruleset=DIRECT,[]GEOIP,CN,no-resolve
 ruleset=🚀 节点选择,[]FINAL
 
-custom_proxy_group=🚀 节点选择`select`[]♻️ 自动选择`[]DIRECT`[] 🇭🇰🇹🇼港台-自动`.*
+custom_proxy_group=🚀 节点选择`select`[]♻️ 自动选择`[]DIRECT`[] 🇭🇰🇹🇼 港台-自动`.*
 custom_proxy_group=♻️ 自动选择`url-test`.*`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇭🇰🇹🇼 港台-自动`url-test`(广港|广台|广日|广新|广韩|广美|香港|HK|Hong Kong|🇭🇰|HongKong|台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan).*`http://www.gstatic.com/generate_204`300,,50
 enable_rule_generator=true
