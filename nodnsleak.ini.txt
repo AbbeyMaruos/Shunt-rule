@@ -14,17 +14,10 @@ ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ch
 ruleset=DIRECT,[]GEOIP,CN,no-resolve
 ruleset=🚀 节点选择,[]FINAL
 
-[custom]
-# （保留你原来的 ruleset 部分…）
+# 1.60 s 刷新一次，超时 5 s
+custom_proxy_group=🇹🇼 台湾测速`url-test`(台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan).*`http://www.gstatic.com/generate_204`,60,5
 
-# 1. 台湾测速组 —— 60 s 刷新一次，超时 5 s
-custom_proxy_group=🇹🇼 台湾测速`url-test`(台湾|Taiwan|TW|台北|台中|高雄|TaiWan|🇹🇼).*`http://www.gstatic.com/generate_204`,60,5
-
-# 2. 香港测速组 —— 同上
-custom_proxy_group=🇭🇰 香港测速`url-test`(香港|Hong Kong|HK|港|🇭🇰).*`http://www.gstatic.com/generate_204`,60,5
-
-# 3. 港台自动 —— fallback 先台湾测速组，全部超时才香港测速组
-custom_proxy_group=🇭🇰🇹🇼 港台自动`url-test`[]台湾测速`[]香港测速.*`http://www.gstatic.com/generate_204`,60,5
+custom_proxy_group=🇭🇰 香港测速`url-test`(广港|广台|广日|广新|广韩|广美|香港|HK|Hong Kong|🇭🇰|HongKong).*`http://www.gstatic.com/generate_204`,60,5
 
 # 4. 总选择组 —— 把 DIRECT、港台自动、以及其余所有节点都拉进来
 custom_proxy_group=🚀 节点选择`select`[]DIRECT,[]🇭🇰🇹🇼 港台自动`(.*)
