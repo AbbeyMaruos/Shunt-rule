@@ -13,8 +13,13 @@ ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ch
 ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
 ruleset=DIRECT,[]GEOIP,CN,no-resolve
 ruleset=🚀 节点选择,[]FINAL
-
-custom_proxy_group=🇭🇰🇹🇼 港台-自动`fallback`(台湾|TW|Taiwan|Tai Wan|🇹🇼|香港|HK|Hong Kong|🇭🇰).*`http://www.gstatic.com/generate_204`300,,50
-custom_proxy_group=🚀 节点选择`select`[]DIRECT`[]🇭🇰🇹🇼 港台-自动
+# 台湾测速组
+custom_proxy_group=🇹🇼 台湾`url-test`(台湾|Taiwan|Tai Wan|TW|🇹🇼).*`http://www.gstatic.com/generate_204`300,,50
+# 香港测速组
+custom_proxy_group=🇭🇰 香港`url-test`(香港|Hong Kong|HK|🇭🇰).*`http://www.gstatic.com/generate_204`300,,50
+# 港台优先组 (先台湾组，炸了再香港组)
+custom_proxy_group=🇭🇰🇹🇼 港台优先`fallback`[]🇹🇼 台湾`[]🇭🇰 香港
+# 总选择组
+custom_proxy_group=🚀 节点选择`select`[]DIRECT`[]🇭🇰🇹🇼 港台优先`(.*)
 enable_rule_generator=true
 overwrite_original_rules=true
