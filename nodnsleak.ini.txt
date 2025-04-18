@@ -24,7 +24,7 @@ custom_proxy_group=🇹🇼 台湾测速`url-test`(台湾|Taiwan|TW|台北|台�
 custom_proxy_group=🇭🇰 香港测速`url-test`(香港|Hong Kong|HK|港|🇭🇰).*`http://www.gstatic.com/generate_204`,60,5
 
 # 3. 港台自动 —— fallback 先台湾测速组，全部超时才香港测速组
-custom_proxy_group=🇭🇰🇹🇼 港台自动`fallback`[]台湾测速`[]香港测速`http://www.gstatic.com/generate_204`,60,5
+custom_proxy_group=🇭🇰🇹🇼 港台自动`url-test`[]台湾测速`[]香港测速.*`http://www.gstatic.com/generate_204`,60,5
 
 # 4. 总选择组 —— 把 DIRECT、港台自动、以及其余所有节点都拉进来
 custom_proxy_group=🚀 节点选择`select`[]DIRECT,[]🇭🇰🇹🇼 港台自动`(.*)
