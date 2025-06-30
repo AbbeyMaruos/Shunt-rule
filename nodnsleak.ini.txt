@@ -14,7 +14,6 @@ ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ch
 ruleset=DIRECT,[]GEOIP,CN,no-resolve
 ruleset=🚀 节点选择,[]FINAL
 
-# 1.60 s 刷新一次，超时 5 s
 custom_proxy_group=🇹🇼 台湾自动`url-test`(台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan).*`http://www.gstatic.com/generate_204`,60,120
 
 custom_proxy_group=🇹🇼 无IEPL`url-test`(?i)^(cn|🇨🇳) (台湾|TW|Tai Wan|TaiWan|Taiwan) \d+[^\w]*$`http://www.gstatic.com/generate_204`,60,120
