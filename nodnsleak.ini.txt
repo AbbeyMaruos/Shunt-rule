@@ -17,7 +17,7 @@ ruleset=🚀 节点选择,[]FINAL
 # 1.60 s 刷新一次，超时 5 s
 custom_proxy_group=🇹🇼 台湾自动`url-test`(台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan).*`http://www.gstatic.com/generate_204`,60,120
 
-custom_proxy_group=🇹🇼 无IEPL`url-test`(?!)(台湾|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan)(?!.*iepl).*`http://www.gstatic.com/generate_204`,60,120
+custom_proxy_group=🇹🇼 无IEPL`url-test`(?!)^Taiwan \d+(?!.*iepl).*`http://www.gstatic.com/generate_204`,60,120
 
 custom_proxy_group=🇭🇰 香港自动`url-test`(广港|广台|广日|广新|广韩|广美|香港|HK|Hong Kong|🇭🇰|HongKong).*`http://www.gstatic.com/generate_204`,60,120
 
